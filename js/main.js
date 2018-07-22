@@ -128,13 +128,13 @@
 	var priceInputMax = document.getElementById('price-max'),
 			priceInputMin = document.getElementById('price-min');
 
-	priceInputMax.addEventListener('change', function(){
+/*	priceInputMax.addEventListener('change', function(){
 		updatePriceSlider($(this).parent() , this.value)
-	});
+	});*
 
 	priceInputMin.addEventListener('change', function(){
 		updatePriceSlider($(this).parent() , this.value)
-	});
+	});*/
 
 	function updatePriceSlider(elem , value) {
 		if ( elem.hasClass('price-min') ) {
@@ -168,28 +168,3 @@
 })(jQuery);
  
 
-// login form
-window.onload = function(){$("#showPassword").hide();}
-
-$("#txtPassword").on('change',function() {  
-		if($("#txtPassword").val())
-		{
-			$("#showPassword").show();
-		}
-		else
-		{
-			$("#showPassword").hide();
-		}
-});
-
-$(".reveal").on('click',function() {
-    var $pwd = $("#txtPassword");
-    if ($pwd.attr('type') === 'password') 
-		{
-        $pwd.attr('type', 'text');
-    } 
-		else 
-		{
-        $pwd.attr('type', 'password');
-    }
-});
